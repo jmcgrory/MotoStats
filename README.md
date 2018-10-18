@@ -6,27 +6,30 @@ A personal development project exploring the latest features within Angular, RXJ
 
 ## Stack
 
-```
-requires content
-```
+- **[Angular CLI](https://github.com/angular/angular-cli)** (7.0.1.)
+- **[RxJS](https://rxjs-dev.firebaseapp.com/)** (6.3.3.)
+- **[Typescript](https://www.typescriptlang.org/)** (3.1.1.)
+- **Karma/Jasmine** (_subject to change_)
 
 ## Tests
 
-```
-requires content
-```
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Built With
+**Notice**: It is likely I will be replacing Karma/Jasmine with Mocha/Chai
 
-```
-requires content
-```
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Contributing
 
-```
-requires content
-```
+As this is a personal development project, I will not be accepting any contributions. If you have any advice or questions, please open an issue or get in contact directly and I will be happy to look into them.
+
+If you wish to fork this project for personal use, please go ahead. If you wish to use this project for business purposes, please contact me first.
 
 ## Versioning
 
