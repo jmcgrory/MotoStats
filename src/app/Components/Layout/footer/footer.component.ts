@@ -2,14 +2,18 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'footer-component',
-  template: `<footer>Placeholder Footer Content</footer>`,
+  template: `<footer>&copy; Copyright Jamie McGrory {{year}} | <a>Terms & Conditions</a></footer>`,
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
 
+  year: number;
+
   constructor() {
 
-    console.log('FooterComponent');
+    const date = new Date();
+
+    this.year = date.getFullYear();
 
   }
 
