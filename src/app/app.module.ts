@@ -44,7 +44,8 @@ const routes: Routes = [
     TableComponent,
     HomeComponent,
     ContactComponent,
-    BikesComponent
+    BikesComponent,
+    LostComponent
   ],
   imports: [
     BrowserModule,
