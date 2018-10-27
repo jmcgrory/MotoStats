@@ -4,9 +4,13 @@ class StringProperty extends Property {
 
     public value: string;
 
-    constructor(newValue: string = null) {
+    constructor(
+        newValue: string,
+        newName: string,
+        newIsSearchable: boolean = false,
+    ) {
 
-        super(newValue);
+        super(newValue, newName, newIsSearchable);
 
     }
 

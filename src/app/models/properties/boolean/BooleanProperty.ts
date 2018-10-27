@@ -4,9 +4,13 @@ class BooleanProperty extends Property {
 
     public value: boolean;
 
-    constructor(newValue: boolean = null) {
+    constructor(
+        newValue: boolean,
+        newName: string,
+        newIsSearchable: boolean = false,
+    ) {
 
-        super(newValue);
+        super(newValue, newName, newIsSearchable);
 
     }
 

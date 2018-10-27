@@ -19,67 +19,120 @@ class BikeModel extends Model {
 
     // Information
 
-    public manufacturer: Props.StringProperty = new Props.StringProperty();
-    public model: Props.StringProperty = new Props.StringProperty();
-    public version: Props.StringProperty = new Props.StringProperty();
-    public year: Props.NumericalProperty = new Props.NumericalProperty();
+    public manufacturer: Props.StringProperty;
+    public model: Props.StringProperty;
+    public version: Props.StringProperty;
+    public year: Props.NumericalProperty;
 
     // Specification
 
-    public displacement: Props.VolumeProperty = new Props.VolumeProperty();
-    public cylinders: Props.NumericalProperty = new Props.NumericalProperty();
-    public fuelCapacity: Props.VolumeProperty = new Props.VolumeProperty();
-    public fuelType: Props.StringProperty = new Props.StringProperty();
-    public fuelEconomy: Props.NumericalProperty = new Props.NumericalProperty();
-    public valves: Props.NumericalProperty = new Props.NumericalProperty();
-    public bore: Props.NumericalProperty = new Props.NumericalProperty();
-    public maxSpeed: Props.SpeedProperty = new Props.SpeedProperty();
-    public maxPower: Props.PowerProperty = new Props.PowerProperty();
-    public maxPowerRPM: Props.NumericalProperty = new Props.NumericalProperty();
-    public maxTorque: Props.ForceProperty = new Props.ForceProperty();
-    public maxTorqueRPM: Props.NumericalProperty = new Props.NumericalProperty();
-    public gears: Props.NumericalProperty = new Props.NumericalProperty();
+    public displacement: Props.VolumeProperty;
+    public cylinders: Props.NumericalProperty;
+    public fuelCapacity: Props.VolumeProperty;
+    public fuelType: Props.StringProperty;
+    public fuelEconomy: Props.NumericalProperty;
+    public valves: Props.NumericalProperty;
+    public bore: Props.NumericalProperty;
+    public maxSpeed: Props.SpeedProperty;
+    public maxPower: Props.PowerProperty;
+    public maxPowerRPM: Props.NumericalProperty;
+    public maxTorque: Props.ForceProperty;
+    public maxTorqueRPM: Props.NumericalProperty;
+    public gears: Props.NumericalProperty;
 
     // Dimensions
 
-    public wheelSizeFront: Props.LengthProperty = new Props.LengthProperty();
-    public wheelSizeRear: Props.LengthProperty = new Props.LengthProperty();
-    public suspensionTravelFront: Props.LengthProperty = new Props.LengthProperty();
-    public suspensionTravelRear: Props.LengthProperty = new Props.LengthProperty();
-    public weightDry: Props.WeightProperty = new Props.WeightProperty();
-    public weightWet: Props.WeightProperty = new Props.WeightProperty();
-    public seatHeightMin: Props.LengthProperty = new Props.LengthProperty();
-    public seatHeightMax: Props.LengthProperty = new Props.LengthProperty();
-    public wheelbase: Props.LengthProperty = new Props.LengthProperty();
-    public rake: Props.NumericalProperty = new Props.NumericalProperty();
-    public trail: Props.LengthProperty = new Props.LengthProperty();
-    public height: Props.LengthProperty = new Props.LengthProperty();
-    public handleBarWidth: Props.LengthProperty = new Props.LengthProperty();
+    public wheelSizeFront: Props.LengthProperty;
+    public wheelSizeRear: Props.LengthProperty;
+    public suspensionTravelFront: Props.LengthProperty;
+    public suspensionTravelRear: Props.LengthProperty;
+    public weightDry: Props.WeightProperty;
+    public weightWet: Props.WeightProperty;
+    public seatHeightMin: Props.LengthProperty;
+    public seatHeightMax: Props.LengthProperty;
+    public wheelbase: Props.LengthProperty;
+    public rake: Props.NumericalProperty;
+    public trail: Props.LengthProperty;
+    public height: Props.LengthProperty;
+    public handleBarWidth: Props.LengthProperty;
 
     // Features
 
-    public hasReverse: Props.BooleanProperty = new Props.BooleanProperty();
-    public hasABS: Props.BooleanProperty = new Props.BooleanProperty();
-    public hasTractionControl: Props.BooleanProperty = new Props.BooleanProperty();
-    public hasFuelGauge: Props.BooleanProperty = new Props.BooleanProperty();
-    public finalDrive: Props.StringProperty = new Props.StringProperty();
-    public hasGearIndicator: Props.BooleanProperty = new Props.BooleanProperty();
-    public hasSpeedometer: Props.BooleanProperty = new Props.BooleanProperty();
-    public hasTechometer: Props.BooleanProperty = new Props.BooleanProperty();
-    public brakesFront: Props.StringProperty = new Props.StringProperty();
-    public brakesRear: Props.StringProperty = new Props.StringProperty();
+    public hasReverse: Props.BooleanProperty;
+    public hasABS: Props.BooleanProperty;
+    public hasTractionControl: Props.BooleanProperty;
+    public hasFuelGauge: Props.BooleanProperty;
+    public finalDrive: Props.StringProperty;
+    public hasGearIndicator: Props.BooleanProperty;
+    public hasSpeedometer: Props.BooleanProperty;
+    public hasTechometer: Props.BooleanProperty;
+    public brakesFront: Props.StringProperty;
+    public brakesRear: Props.StringProperty;
+
+    public static getProperties = (includeDefault: boolean = true): object => {
+
+        const includable = includeDefault ? BikeModel.getDefaultProperties() : {};
+
+        return {
+
+            ...includable,
+
+            manufacturer: Props.StringProperty,
+            model: Props.StringProperty,
+            version: Props.StringProperty,
+            year: Props.NumericalProperty,
+            displacement: Props.VolumeProperty,
+            cylinders: Props.NumericalProperty,
+            fuelCapacity: Props.VolumeProperty,
+            fuelType: Props.StringProperty,
+            fuelEconomy: Props.NumericalProperty,
+            valves: Props.NumericalProperty,
+            bore: Props.NumericalProperty,
+            maxSpeed: Props.SpeedProperty,
+            maxPower: Props.PowerProperty,
+            maxPowerRPM: Props.NumericalProperty,
+            maxTorque: Props.ForceProperty,
+            maxTorqueRPM: Props.NumericalProperty,
+            gears: Props.NumericalProperty,
+            wheelSizeFront: Props.LengthProperty,
+            wheelSizeRear: Props.LengthProperty,
+            suspensionTravelFront: Props.LengthProperty,
+            suspensionTravelRear: Props.LengthProperty,
+            weightDry: Props.WeightProperty,
+            weightWet: Props.WeightProperty,
+            seatHeightMin: Props.LengthProperty,
+            seatHeightMax: Props.LengthProperty,
+            wheelbase: Props.LengthProperty,
+            rake: Props.NumericalProperty,
+            trail: Props.LengthProperty,
+            height: Props.LengthProperty,
+            handleBarWidth: Props.LengthProperty,
+            hasReverse: Props.BooleanProperty,
+            hasABS: Props.BooleanProperty,
+            hasTractionControl: Props.BooleanProperty,
+            hasFuelGauge: Props.BooleanProperty,
+            finalDrive: Props.StringProperty,
+            hasGearIndicator: Props.BooleanProperty,
+            hasSpeedometer: Props.BooleanProperty,
+            hasTechometer: Props.BooleanProperty,
+            brakesFront: Props.StringProperty,
+            brakesRear: Props.StringProperty,
+
+        }
+
+    };
 
     // Possible
 
     /**
      * @todo EURO4 etc.
      */
-    // public compliancy: Props.StringProperty  = new Props.StringProperty ();
+    // public compliancy: Props.StringProperty ;
 
     /**
      * @todo not searchable...
      */
-    // public compressionRatio: Props.StringProperty  = new Props.StringProperty ();
+    // public compressionRatio: Props.StringProperty ;
 
 }
 

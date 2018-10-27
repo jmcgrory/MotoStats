@@ -4,13 +4,9 @@
 
         <div class="th" *ngFor="let column of columns">
 
-            <span>{{ column.name }}</span>
+            <span>{{ column }}</span>
 
-            <span *ngIf="column.options">
-
-                Options...
-
-            </span>
+            <!-- TODO: Will output options etc. -->
 
         </div>
 
@@ -20,7 +16,7 @@
 
         <div class="td" *ngFor="let column of columns">
 
-            <span>{{ row[column.key].toString() }}</span>
+            <span>{{ row[column] }}</span>
 
         </div>
 

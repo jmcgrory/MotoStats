@@ -2,13 +2,29 @@ import { StringProperty, BooleanProperty, NumericalProperty } from './properties
 
 abstract class Model {
 
-    public id: NumericalProperty = new NumericalProperty();
-    public isActive: BooleanProperty = new BooleanProperty();
-    public createdAt: StringProperty = new StringProperty();
-    public updatedAt: StringProperty = new StringProperty();
-    public deletedAt: StringProperty = new StringProperty();
+    public id: NumericalProperty;
+    public isActive: BooleanProperty;
+    public createdAt: StringProperty;
+    public updatedAt: StringProperty;
+    public deletedAt: StringProperty;
 
     constructor(parameters: object) { }
+
+    protected static getDefaultProperties = (): object => {
+
+        return {
+
+            id: NumericalProperty,
+            isActive: BooleanProperty,
+            createdAt: StringProperty,
+            updatedAt: StringProperty,
+            deletedAt: StringProperty,
+
+        }
+
+    }
+
+    public static getProperties = (includeDefault: boolean = true): object => Model.getDefaultProperties();
 
     public setValue = (key: string, value: any): this => {
 
@@ -28,9 +44,15 @@ abstract class Model {
 
     public fromObject = (parameters: object): this => {
 
+        const properties = Model.getProperties();
+
         Object.entries(parameters).forEach(([key, value]) => {
 
-            return this.setValue(key, value);
+            if (properties.hasOwnProperty(key)) {
+
+                this[key] = new properties[key](value, key, false);
+
+            }
 
         });
 

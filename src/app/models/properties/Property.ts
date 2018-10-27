@@ -1,18 +1,18 @@
 abstract class Property {
 
     public value: any;
+    public name: string;
+    public isSearchable: boolean;
 
-    /**
-     * @todo implement
-     */
-    private searchable: boolean = false;
+    constructor(
+        newValue: string | number | boolean,
+        newName: string,
+        newIsSearchable: boolean = false,
+    ) {
 
-    /**
-     * @todo implement
-     */
-    private convertable: boolean = false;
+        this.name = newName;
 
-    constructor(newValue: string | number | boolean = null) {
+        this.isSearchable = newIsSearchable;
 
         return this.setValue(newValue);
 

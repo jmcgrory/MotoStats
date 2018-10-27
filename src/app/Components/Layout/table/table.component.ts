@@ -8,19 +8,11 @@ import BikeModel from '../../../models/BikeModel';
 })
 export class TableComponent implements OnInit {
 
-  columns: object[] = [
+  columns: string[] = [
 
-    { name: 'id', key: 'id', options: false },
+    // TODO: Will be object...
 
-    { name: 'manufacturer', key: 'manufacturer', options: false },
-
-    { name: 'model', key: 'model', options: false },
-
-    { name: 'cc', key: 'displacement', options: false },
-
-    { name: 'year', key: 'year', options: false },
-
-    { name: 'ABS', key: 'hasABS', options: false },
+    ...Object.keys(BikeModel.getProperties(false))
 
   ];
 

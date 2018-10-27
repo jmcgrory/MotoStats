@@ -12,9 +12,13 @@ class ForceProperty extends NumericalProperty {
 
     ]);
 
-    constructor(newValue: number = null) {
+    constructor(
+        newValue: number,
+        newName: string,
+        newIsSearchable: boolean = false,
+    ) {
 
-        super(newValue);
+        super(newValue, newName, newIsSearchable);
 
     }
 
