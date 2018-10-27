@@ -1,38 +1,24 @@
+import { StringProperty, BooleanProperty, NumericalProperty } from './properties';
+
 abstract class Model {
 
-    id: number = null;
+    public id: NumericalProperty = new NumericalProperty();
+    public isActive: BooleanProperty = new BooleanProperty();
+    public createdAt: StringProperty = new StringProperty();
+    public updatedAt: StringProperty = new StringProperty();
+    public deletedAt: StringProperty = new StringProperty();
 
-    isActive: boolean = null;
-
-    createdAt: string = null;
-
-    updatedAt: string = null;
-
-    deletedAt: string = null;
-
-    constructor(parameters: object) {
-
-        if (typeof parameters === 'object') {
-
-            this.fromObject(parameters);
-
-        }
-
-        return this;
-
-    }
+    constructor(parameters: object) { }
 
     public setValue = (key: string, value: any): this => {
 
-        if (typeof this[key] !== undefined) {
-
-            console.log(`${key}: ${value}`);
+        if (typeof this[key] !== 'undefined') {
 
             this[key] = value || null;
 
         } else {
 
-            console.warn('Attempting to set value which does not exist on this object');
+            console.warn(`Attempting to set value which does not exist on this object: ${key}`);
 
         }
 

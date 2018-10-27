@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
   template: `
   <header>
     <div id="branding">
-      <img src="/assets/logo.svg" width="50" height="50" alt="MotoStats Branding">
+      <img src="/assets/logo.svg" width="35" height="35" alt="MotoStats Branding">
       <h1>{{title}}</h1>
     </div>
     <navigation-component></navigation-component>
@@ -15,11 +15,5 @@ import { Component, Input } from '@angular/core';
 export class HeaderComponent {
 
   @Input() title: string;
-
-  constructor() {
-
-    console.log('HeaderComponent');
-
-  }
 
 }
