@@ -5,15 +5,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { HeaderComponent } from './Components/Layout/header/header.component';
-import { FooterComponent } from './Components/Layout/footer/footer.component';
-import { NavigationComponent } from './Components/Layout/navigation/navigation.component';
-import { TableComponent } from './Components/Layout/table/table.component';
+import { HeaderComponent } from './components/layout/header/header.component';
+import { FooterComponent } from './components/layout/footer/footer.component';
+import { NavigationComponent } from './components/layout/navigation/navigation.component';
+import { TableComponent } from './components/layout/table/table.component';
 
-import { HomeComponent } from './Components/Route/home/home.component';
-import { ContactComponent } from './Components/Route/contact/contact.component';
-import { BikesComponent } from './Components/Route/bikes/bikes.component';
-import { LostComponent } from './Components/Route/lost/lost.component';
+import { HomeComponent } from './components/route/home/home.component';
+import { ContactComponent } from './components/route/contact/contact.component';
+import { BikesComponent } from './components/route/bikes/bikes.component';
+import { LostComponent } from './components/route/lost/lost.component';
 
 const routes: Routes = [
   {
