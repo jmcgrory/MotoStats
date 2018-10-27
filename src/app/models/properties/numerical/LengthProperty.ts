@@ -8,6 +8,8 @@ class LengthProperty extends NumericalProperty {
 
         ['mm', (value) => value],
 
+        ['cm', (value) => (value / 10)],
+
         ['inches', (value) => (value / 0.0393701)]
 
     ]);
