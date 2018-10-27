@@ -18,11 +18,15 @@ abstract class Model {
 
         }
 
+        return this;
+
     }
 
     public setValue = (key: string, value: any): this => {
 
         if (typeof this[key] !== undefined) {
+
+            console.log(`${key}: ${value}`);
 
             this[key] = value || null;
 
@@ -38,7 +42,11 @@ abstract class Model {
 
     public fromObject = (parameters: object): this => {
 
-        Object(parameters).entries().forEach(([key, value]) => this.setValue(key, value));
+        Object.entries(parameters).forEach(([key, value]) => {
+
+            return this.setValue(key, value);
+
+        });
 
         return this;
 

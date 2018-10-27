@@ -6,133 +6,133 @@ class BikeModel extends Model {
     // Information
 
     /** Maybe a type? */
-    manufacturer: string;
+    public manufacturer: string;
 
     /** e.g. Bonneville, Ninja, Hornet */
-    model: string;
+    public model: string;
 
     /** i.e. rs/sport */
-    version: string;
+    public version: string;
 
     /** Model release year */
-    year: number;
+    public year: number;
 
 
     // Specification
 
     /** (cc) */
-    displacement: number;
+    public displacement: number;
 
     /** (integer) */
-    cylinders: number;
+    public cylinders: number;
 
     /** (ml) */
-    fuelCapacity: number;
+    public fuelCapacity: number;
 
     /** (Type) */
-    fuelType: FuelType;
+    public fuelType: FuelType;
 
     /** (l/km) */
-    fuelEconomy: number;
+    public fuelEconomy: number;
 
     /** Number of (integer) */
-    valves: number;
+    public valves: number;
 
     /** (integer) */
-    bore: number;
+    public bore: number;
 
     /** (kph) */
-    maxSpeed: number;
+    public maxSpeed: number;
 
     /** (kW) */
-    maxPower: number;
+    public maxPower: number;
 
     /** (rpm) */
-    maxPowerRPM: number;
+    public maxPowerRPM: number;
 
     /** (Nm) */
-    maxTorque: number;
+    public maxTorque: number;
 
     /** (rpm) */
-    maxTorqueRPM: number;
+    public maxTorqueRPM: number;
 
     /** (integer) */
-    gears: number;
+    public gears: number;
 
 
     // Dimensions
 
     /** (mm) */
-    wheelSizeFront: number;
+    public wheelSizeFront: number;
 
     /** (mm) */
-    wheelSizeRear: number;
+    public wheelSizeRear: number;
 
     /** (mm) */
-    suspensionTravelFront: number;
+    public suspensionTravelFront: number;
 
     /** (mm) */
-    suspensionTravelRear: number;
+    public suspensionTravelRear: number;
 
     /** (grams) */
-    weightDry: number;
+    public weightDry: number;
 
     /** (grams) */
-    weightWet: number;
+    public weightWet: number;
 
     //** Minimum factory seat height (mm) */
-    seatHeightMin: number;
+    public seatHeightMin: number;
 
     /** Maximum factory seat height (mm) */
-    seatHeightMax: boolean;
+    public seatHeightMax: boolean;
 
     /** (mm) */
-    wheelbase: number;
+    public wheelbase: number;
 
     /** (degrees) */
-    rake: number;
+    public rake: number;
 
     /** (mm) */
-    trail: number;
+    public trail: number;
 
     /** (mm) */
-    height: number;
+    public height: number;
 
     /** (mm) */
-    handleBarWidth: number;
+    public handleBarWidth: number;
 
 
     // Features
 
     /** (bool) */
-    hasReverse: boolean;
+    public hasReverse: boolean;
 
     /** (bool) */
-    hasABS: boolean;
+    public hasABS: boolean;
 
     /** (bool) */
-    hasTractionControl: boolean;
+    public hasTractionControl: boolean;
 
     /** (bool) */
-    hasFuelGauge: boolean;
+    public hasFuelGauge: boolean;
 
     /** (Type) */
-    finalDrive: FinalDrive;
+    public finalDrive: FinalDrive;
 
     /** (boolean) */
-    hasGearIndicator: boolean;
+    public hasGearIndicator: boolean;
 
     /** (boolean) */
-    hasSpeedometer: boolean;
+    public hasSpeedometer: boolean;
 
     /** (boolean) */
-    hasTechometer: boolean;
+    public hasTechometer: boolean;
 
     /** (Type) */
-    brakesFront: BrakeType;
+    public brakesFront: BrakeType;
 
     /** (Type) */
-    brakesRear: BrakeType;
+    public brakesRear: BrakeType;
 
 
     // Possible
@@ -140,12 +140,12 @@ class BikeModel extends Model {
     /**
      * @todo EURO4 etc.
      */
-    // compliancy: string;
+    // public compliancy: string;
 
     /**
      * @todo not searchable...
      */
-    // compressionRatio: string;
+    // public compressionRatio: string;
 
 }
 
