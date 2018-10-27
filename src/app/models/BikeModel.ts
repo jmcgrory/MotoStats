@@ -1,5 +1,4 @@
 import Model from './Model';
-import { FinalDrive, BrakeType, FuelType } from './Types';
 import * as Properties from './properties';
 
 class BikeModel extends Model {
