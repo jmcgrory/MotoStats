@@ -1,0 +1,65 @@
+@import '../../../../partials/variables';
+
+.table {
+
+    display: table;
+
+    width: 100%;
+
+    overflow-x: scroll;
+
+    border-top: 1px solid $tone-medium;
+
+    border-left: 1px solid $tone-medium;
+
+    border-collapse: collapse;
+
+    .tr {
+
+        display: table-row;
+
+        &:last-child .td {
+
+            border-bottom-style: solid;
+
+        }
+
+        &:nth-child(2n+1){
+
+            background: $tone-faint;
+
+        }
+
+    }
+
+    .td, .th {
+
+        display: table-cell;
+
+        border-right: 1px solid $tone-medium;
+
+        padding: 0.5em;
+
+    }
+
+    .td {
+
+        color: $tone-dark;
+
+        border-bottom: 1px dashed $tone-medium;
+
+    }
+
+    .th {
+
+        text-transform: capitalize;
+
+        font-weight: bold;
+
+        background: $tone-light;
+
+        border-bottom: 1px solid $tone-medium;
+
+    }
+
+}

@@ -1,1 +1,29 @@
-<p>table works!</p>
+<div class="table">
+
+    <div class="tr">
+
+        <div class="th" *ngFor="let column of columns">
+
+            <span>{{ column.name }}</span>
+
+            <span *ngIf="column.options">
+
+                Options...
+
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="tr" *ngFor="let row of rows">
+
+        <div class="td" *ngFor="let column of columns">
+
+            <span>{{ row[column.key] }}</span>
+
+        </div>
+
+    </div>
+
+</div>
