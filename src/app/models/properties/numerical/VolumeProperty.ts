@@ -16,6 +16,12 @@ class VolumeProperty extends NumericalProperty {
 
     ]);
 
+    constructor(newValue: number = null) {
+
+        super(newValue);
+
+    }
+
 }
 
 export default VolumeProperty;

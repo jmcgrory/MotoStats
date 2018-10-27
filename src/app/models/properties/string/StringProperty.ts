@@ -2,7 +2,13 @@ import Property from '../Property';
 
 class StringProperty extends Property {
 
-    public value: string = null;
+    public value: string;
+
+    constructor(newValue: string = null) {
+
+        super(newValue);
+
+    }
 
 }
 

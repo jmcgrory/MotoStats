@@ -2,15 +2,20 @@ import Property from '../Property';
 
 class NumericalProperty extends Property {
 
-    public value: number = null;
-
+    public value: number;
     public units: string;
 
     public static availableUnits: Map<string, Function> = new Map();
 
+    constructor(newValue: number = null) {
+
+        super(newValue);
+
+    }
+
     public toString = (): string => {
 
-        if (this.units !== null) {
+        if (this.units !== null && this.value !== null) {
 
             return NumericalProperty.availableUnits.get(this.units)(this.value);
 

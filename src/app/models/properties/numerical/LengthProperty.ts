@@ -14,6 +14,12 @@ class LengthProperty extends NumericalProperty {
 
     ]);
 
+    constructor(newValue: number = null) {
+
+        super(newValue);
+
+    }
+
 }
 
 export default LengthProperty;

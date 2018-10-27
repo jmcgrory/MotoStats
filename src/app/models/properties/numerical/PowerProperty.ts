@@ -14,6 +14,12 @@ class PowerProperty extends NumericalProperty {
 
     ]);
 
+    constructor(newValue: number = null) {
+
+        super(newValue);
+
+    }
+
 }
 
 export default PowerProperty;

@@ -12,6 +12,12 @@ class SpeedProperty extends NumericalProperty {
 
     ]);
 
+    constructor(newValue: number = null) {
+
+        super(newValue);
+
+    }
+
 }
 
 export default SpeedProperty;

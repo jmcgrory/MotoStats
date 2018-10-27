@@ -1,6 +1,6 @@
 abstract class Property {
 
-    public value: any = null;
+    public value: any;
 
     /**
      * @todo implement
@@ -12,7 +12,7 @@ abstract class Property {
      */
     private convertable: boolean = false;
 
-    constructor(newValue: string | number | boolean) {
+    constructor(newValue: string | number | boolean = null) {
 
         return this.setValue(newValue);
 

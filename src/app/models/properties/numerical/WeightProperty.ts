@@ -14,6 +14,12 @@ class WeightProperty extends NumericalProperty {
 
     ]);
 
+    constructor(newValue: number = null) {
+
+        super(newValue);
+
+    }
+
 }
 
 export default WeightProperty;
