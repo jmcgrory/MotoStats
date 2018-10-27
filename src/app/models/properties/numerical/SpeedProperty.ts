@@ -8,7 +8,7 @@ class SpeedProperty extends NumericalProperty {
 
         ['kph', (value) => value],
 
-        ['mph', (value) => (value / 0.621371)]
+        ['mph', (value) => (value * 0.621371)]
 
     ]);
 

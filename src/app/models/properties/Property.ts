@@ -2,9 +2,15 @@ abstract class Property {
 
     public value: any = null;
 
+    /**
+     * @todo implement
+     */
     private searchable: boolean = false;
 
-    private convertable: boolean;
+    /**
+     * @todo implement
+     */
+    private convertable: boolean = false;
 
     constructor(newValue: string | number | boolean) {
 

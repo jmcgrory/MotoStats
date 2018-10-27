@@ -2,6 +2,8 @@ import Property from '../Property';
 
 class NumericalProperty extends Property {
 
+    public value: number = null;
+
     public units: string;
 
     public static availableUnits: Map<string, Function> = new Map();
@@ -17,24 +19,6 @@ class NumericalProperty extends Property {
             return `${this.value}`;
 
         }
-
-    }
-
-    public setValue = (newValue: number | string): this => {
-
-        const newValueType = typeof newValue;
-
-        if (newValueType === 'number') {
-
-            this.value = newValue;
-
-        } else if (newValueType === 'string') {
-
-            this.value = parseInt(`${newValue}`);
-
-        }
-
-        return this;
 
     }
 

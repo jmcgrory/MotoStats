@@ -10,7 +10,7 @@ class WeightProperty extends NumericalProperty {
 
         ['kg', (value) => (value / 1000)],
 
-        ['lbs', (value) => (value / 0.00220462)],
+        ['lbs', (value) => (value * 0.00220462)],
 
     ]);
 

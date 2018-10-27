@@ -1,138 +1,139 @@
 import Model from './Model';
 import { FinalDrive, BrakeType, FuelType } from './Types';
+import * as Properties from './properties';
 
 class BikeModel extends Model {
 
     // Information
 
     /** Maybe a type? */
-    public manufacturer: string;
+    public manufacturer: Properties.StringProperty;
 
     /** e.g. Bonneville, Ninja, Hornet */
-    public model: string;
+    public model: Properties.StringProperty;
 
     /** i.e. rs/sport */
-    public version: string;
+    public version: Properties.StringProperty;
 
     /** Model release year */
-    public year: number;
+    public year: Properties.NumericalProperty;
 
 
     // Specification
 
     /** (cc) */
-    public displacement: number;
+    public displacement: Properties.NumericalProperty;
 
     /** (integer) */
-    public cylinders: number;
+    public cylinders: Properties.NumericalProperty;
 
     /** (ml) */
-    public fuelCapacity: number;
+    public fuelCapacity: Properties.NumericalProperty;
 
     /** (Type) */
-    public fuelType: FuelType;
+    public fuelType: Properties.StringProperty;
 
     /** (l/km) */
-    public fuelEconomy: number;
+    public fuelEconomy: Properties.NumericalProperty;
 
     /** Number of (integer) */
-    public valves: number;
+    public valves: Properties.NumericalProperty;
 
     /** (integer) */
-    public bore: number;
+    public bore: Properties.NumericalProperty;
 
     /** (kph) */
-    public maxSpeed: number;
+    public maxSpeed: Properties.NumericalProperty;
 
     /** (kW) */
-    public maxPower: number;
+    public maxPower: Properties.NumericalProperty;
 
     /** (rpm) */
-    public maxPowerRPM: number;
+    public maxPowerRPM: Properties.NumericalProperty;
 
     /** (Nm) */
-    public maxTorque: number;
+    public maxTorque: Properties.NumericalProperty;
 
     /** (rpm) */
-    public maxTorqueRPM: number;
+    public maxTorqueRPM: Properties.NumericalProperty;
 
     /** (integer) */
-    public gears: number;
+    public gears: Properties.NumericalProperty;
 
 
     // Dimensions
 
     /** (mm) */
-    public wheelSizeFront: number;
+    public wheelSizeFront: Properties.NumericalProperty;
 
     /** (mm) */
-    public wheelSizeRear: number;
+    public wheelSizeRear: Properties.NumericalProperty;
 
     /** (mm) */
-    public suspensionTravelFront: number;
+    public suspensionTravelFront: Properties.NumericalProperty;
 
     /** (mm) */
-    public suspensionTravelRear: number;
+    public suspensionTravelRear: Properties.NumericalProperty;
 
     /** (grams) */
-    public weightDry: number;
+    public weightDry: Properties.NumericalProperty;
 
     /** (grams) */
-    public weightWet: number;
+    public weightWet: Properties.NumericalProperty;
 
     //** Minimum factory seat height (mm) */
-    public seatHeightMin: number;
+    public seatHeightMin: Properties.NumericalProperty;
 
     /** Maximum factory seat height (mm) */
-    public seatHeightMax: boolean;
+    public seatHeightMax: Properties.BooleanProperty;
 
     /** (mm) */
-    public wheelbase: number;
+    public wheelbase: Properties.NumericalProperty;
 
     /** (degrees) */
-    public rake: number;
+    public rake: Properties.NumericalProperty;
 
     /** (mm) */
-    public trail: number;
+    public trail: Properties.NumericalProperty;
 
     /** (mm) */
-    public height: number;
+    public height: Properties.NumericalProperty;
 
     /** (mm) */
-    public handleBarWidth: number;
+    public handleBarWidth: Properties.NumericalProperty;
 
 
     // Features
 
     /** (bool) */
-    public hasReverse: boolean;
+    public hasReverse: Properties.BooleanProperty;
 
     /** (bool) */
-    public hasABS: boolean;
+    public hasABS: Properties.BooleanProperty;
 
     /** (bool) */
-    public hasTractionControl: boolean;
+    public hasTractionControl: Properties.BooleanProperty;
 
     /** (bool) */
-    public hasFuelGauge: boolean;
+    public hasFuelGauge: Properties.BooleanProperty;
 
     /** (Type) */
-    public finalDrive: FinalDrive;
+    public finalDrive: Properties.StringProperty;
 
-    /** (boolean) */
-    public hasGearIndicator: boolean;
+    /** (BooleanProperty) */
+    public hasGearIndicator: Properties.BooleanProperty;
 
-    /** (boolean) */
-    public hasSpeedometer: boolean;
+    /** (BooleanProperty) */
+    public hasSpeedometer: Properties.BooleanProperty;
 
-    /** (boolean) */
-    public hasTechometer: boolean;
-
-    /** (Type) */
-    public brakesFront: BrakeType;
+    /** (BooleanProperty) */
+    public hasTechometer: Properties.BooleanProperty;
 
     /** (Type) */
-    public brakesRear: BrakeType;
+    public brakesFront: Properties.StringProperty;
+
+    /** (Type) */
+    public brakesRear: Properties.StringProperty;
 
 
     // Possible
@@ -140,12 +141,12 @@ class BikeModel extends Model {
     /**
      * @todo EURO4 etc.
      */
-    // public compliancy: string;
+    // public compliancy: Properties.StringProperty;
 
     /**
      * @todo not searchable...
      */
-    // public compressionRatio: string;
+    // public compressionRatio: Properties.StringProperty;
 
 }
 
