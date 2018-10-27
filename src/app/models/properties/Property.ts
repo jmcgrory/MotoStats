@@ -2,6 +2,10 @@ abstract class Property {
 
     public value: any = null;
 
+    private searchable: boolean = false;
+
+    private convertable: boolean;
+
     constructor(newValue: string | number | boolean) {
 
         return this.setValue(newValue);
@@ -31,3 +35,5 @@ abstract class Property {
     }
 
 }
+
+export default Property;
