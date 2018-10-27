@@ -1,0 +1,27 @@
+@import '../../../../partials/variables';
+
+header {
+
+    padding: 1em;
+
+    background: $tone-light;
+
+    justify-content: space-between;
+
+    h1 {
+
+        margin: 0 0.5em;
+
+    }
+
+}
+
+header, #branding {
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+}

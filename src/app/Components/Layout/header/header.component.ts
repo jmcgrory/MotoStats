@@ -4,8 +4,10 @@ import { Component, Input } from '@angular/core';
   selector: 'header-component',
   template: `
   <header>
-    <img src="/assets/logo.svg" width="70" height="70" alt="MotoStats Branding">
-    <h1>{{title}}</h1>
+    <div id="branding">
+      <img src="/assets/logo.svg" width="50" height="50" alt="MotoStats Branding">
+      <h1>{{title}}</h1>
+    </div>
     <navigation-component></navigation-component>
   </header>`,
   styleUrls: ['./header.component.scss']

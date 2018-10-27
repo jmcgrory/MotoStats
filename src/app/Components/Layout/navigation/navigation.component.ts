@@ -4,9 +4,9 @@ import { Component, OnInit } from '@angular/core';
   selector: 'navigation-component',
   template: `
     <ul>
-      <li><a>Home</a></li>
-      <li><a>Bikes</a></li>
-      <li><a>Contact</a></li>
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/bikes">Bikes</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
     </ul>
   `,
   styleUrls: ['./navigation.component.scss']
