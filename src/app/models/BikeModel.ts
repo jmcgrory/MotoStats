@@ -21,18 +21,18 @@ class BikeModel extends Model {
     // Specification
 
     /** (cc) */
-    public displacement: Properties.NumericalProperty;
+    public displacement: Properties.VolumeProperty;
 
     /** (integer) */
     public cylinders: Properties.NumericalProperty;
 
     /** (ml) */
-    public fuelCapacity: Properties.NumericalProperty;
+    public fuelCapacity: Properties.VolumeProperty;
 
     /** (Type) */
     public fuelType: Properties.StringProperty;
 
-    /** (l/km) */
+    /** (l/km) */ // TODO:
     public fuelEconomy: Properties.NumericalProperty;
 
     /** Number of (integer) */
@@ -42,16 +42,16 @@ class BikeModel extends Model {
     public bore: Properties.NumericalProperty;
 
     /** (kph) */
-    public maxSpeed: Properties.NumericalProperty;
+    public maxSpeed: Properties.SpeedProperty;
 
     /** (kW) */
-    public maxPower: Properties.NumericalProperty;
+    public maxPower: Properties.PowerProperty;
 
     /** (rpm) */
     public maxPowerRPM: Properties.NumericalProperty;
 
     /** (Nm) */
-    public maxTorque: Properties.NumericalProperty;
+    public maxTorque: Properties.ForceProperty;
 
     /** (rpm) */
     public maxTorqueRPM: Properties.NumericalProperty;
@@ -63,43 +63,43 @@ class BikeModel extends Model {
     // Dimensions
 
     /** (mm) */
-    public wheelSizeFront: Properties.NumericalProperty;
+    public wheelSizeFront: Properties.LengthProperty;
 
     /** (mm) */
-    public wheelSizeRear: Properties.NumericalProperty;
+    public wheelSizeRear: Properties.LengthProperty;
 
     /** (mm) */
-    public suspensionTravelFront: Properties.NumericalProperty;
+    public suspensionTravelFront: Properties.LengthProperty;
 
     /** (mm) */
-    public suspensionTravelRear: Properties.NumericalProperty;
+    public suspensionTravelRear: Properties.LengthProperty;
 
     /** (grams) */
-    public weightDry: Properties.NumericalProperty;
+    public weightDry: Properties.WeightProperty;
 
     /** (grams) */
-    public weightWet: Properties.NumericalProperty;
+    public weightWet: Properties.WeightProperty;
 
     //** Minimum factory seat height (mm) */
-    public seatHeightMin: Properties.NumericalProperty;
+    public seatHeightMin: Properties.LengthProperty;
 
     /** Maximum factory seat height (mm) */
-    public seatHeightMax: Properties.BooleanProperty;
+    public seatHeightMax: Properties.LengthProperty;
 
     /** (mm) */
-    public wheelbase: Properties.NumericalProperty;
+    public wheelbase: Properties.LengthProperty;
 
     /** (degrees) */
     public rake: Properties.NumericalProperty;
 
     /** (mm) */
-    public trail: Properties.NumericalProperty;
+    public trail: Properties.LengthProperty;
 
     /** (mm) */
-    public height: Properties.NumericalProperty;
+    public height: Properties.LengthProperty;
 
     /** (mm) */
-    public handleBarWidth: Properties.NumericalProperty;
+    public handleBarWidth: Properties.LengthProperty;
 
 
     // Features
