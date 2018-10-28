@@ -6,7 +6,7 @@
 
             <span>{{ column }}</span>
 
-            <!-- TODO: Will output options etc. -->
+            <span *ngIf="model[column]">model[column].availableUnits</span>
 
         </div>
 
@@ -16,7 +16,17 @@
 
         <div class="td" *ngFor="let column of columns">
 
-            <span>{{ row[column] }}</span>
+            <span *ngIf="row[column]" class="data">
+
+                <span class="data-value">{{ row[column].toString() }}</span>
+
+                <span class="data-units" *ngIf="row[column].units">
+
+                    ({{ row[column].units }})
+
+                </span>
+
+            </span>
 
         </div>
 

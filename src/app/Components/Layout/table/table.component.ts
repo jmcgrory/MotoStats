@@ -8,13 +8,11 @@ import BikeModel from '../../../models/BikeModel';
 })
 export class TableComponent implements OnInit {
 
-  columns: string[] = [
+  model = BikeModel;
 
-    // TODO: Will be object...
+  log = (val) => console.log(val);
 
-    ...Object.keys(BikeModel.getProperties(false))
-
-  ];
+  columns: string[] = Object.keys(BikeModel.getProperties(false));
 
   getRandomFromArray = (array: string[]): string => {
 

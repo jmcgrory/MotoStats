@@ -9,7 +9,7 @@ class BikeModel extends Model {
 
         if (typeof parameters === 'object') {
 
-            this.fromObject(parameters);
+            this.fromObject(parameters, BikeModel.getProperties());
 
         }
 

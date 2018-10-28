@@ -17,17 +17,27 @@ class NumericalProperty extends Property {
 
     }
 
+    protected getAvailableUnits = (): Map<string, Function> => {
+
+        return NumericalProperty.availableUnits;
+
+    }
+
     public toString = (): string => {
 
         if (this.units !== null && this.value !== null) {
 
-            return NumericalProperty.availableUnits.get(this.units)(this.value);
+            const conversion = this.getAvailableUnits().get(this.units);
 
-        } else {
+            if (typeof conversion === 'function') {
 
-            return `${this.value}`;
+                return conversion(this.value);
+
+            }
 
         }
+
+        return `${this.value}`;
 
     }
 

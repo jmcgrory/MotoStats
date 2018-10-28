@@ -42,9 +42,7 @@ abstract class Model {
 
     }
 
-    public fromObject = (parameters: object): this => {
-
-        const properties = Model.getProperties();
+    public fromObject = (parameters: object, properties: object): this => {
 
         Object.entries(parameters).forEach(([key, value]) => {
 
